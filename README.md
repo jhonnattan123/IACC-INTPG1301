@@ -226,12 +226,20 @@ $primer_numero = $_GET["primer_numero"];
 $segundo_numero = $_GET["segundo_numero"];
 $operacion = $_GET["operacion"];
 
+function SUMAR( $n1, $n2 ){
+	return $n1 + $n2;
+}
+
+function RESTAR( $n1, $n2 ){
+	return $n1 - $n2;
+}
+
 switch($operacion){
 	case"SUMAR":
-		$resultado = $primer_numero + $segundo_numero;
+		$resultado = SUMAR( $primer_numero, $segundo_numero );
 	break;
 	case"RESTAR":
-		$resultado = $primer_numero - $segundo_numero;
+		$resultado = RESTAR( $primer_numero, $segundo_numero );
 	break;
 	default:
 }
