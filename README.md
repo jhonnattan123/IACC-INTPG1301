@@ -1,24 +1,22 @@
 # IACC-INTPG1301
 634-2021
 
-EJEMPLO CON CLI
+## Ejemplos:
+
+### con PHP CLI
 ```php
 <?php
-
 function sumar() {
 	$n_1 = readline('INGRESE PRIMER NUMERO: ');
 	$n_2 = readline('INGRESE SEGUNDO NUMERO: ');
     echo $n_1+$n_2."\n"; // \n es un salto de linea osea un enter
 }
-
 function restar() {
   	$n_1 = readline('INGRESE PRIMER NUMERO: ');
 	$n_2 = readline('INGRESE SEGUNDO NUMERO: ');
     echo $n_1-$n_2."\n";
 }
-
 $opcion = readline('SELECCIONE UNA OPCION (SUMAR|RESTAR): ');
-
 switch ($opcion) {
   case "SUMAR":
     sumar();
@@ -29,12 +27,10 @@ switch ($opcion) {
   default:
     echo "OPCION INVALIDA\n";
 }
-
-
 ?>
 ```
 
-Pseudocodigo de ejemplo anterior:
+### Pseudocodigo:
 
 ```pSeInt
 Funcion SUMAR (  )
