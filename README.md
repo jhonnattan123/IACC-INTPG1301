@@ -174,6 +174,27 @@ while($continuar == "si") {
 
 ?>
 ```
+
+
+ejemplo pseudocodigo para exponente
+```
+SubProceso  resultado <- Potencia (base, exponente)
+    Si exponente=0 Entonces
+        resultado <- 1;
+    sino 
+        resultado <- base*Potencia(base,exponente-1); 
+    FinSi
+FinSubProceso
+
+Proceso DosALaDiezRecursivo
+    Escribir "Ingrese Base"
+    Leer base
+    Escribir "Ingrese Exponente"
+    Leer exponente
+    Escribir "El resultado es ",Potencia(base,exponente)
+FinProceso
+
+```
 # Enlaces
 diferencia entre print y echo
 https://www.it-swarm-es.com/es/php/cual-es-la-diferencia-entre-echo-print-y-print-r-en-php/968854098/
