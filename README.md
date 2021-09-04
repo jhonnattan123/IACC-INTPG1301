@@ -34,6 +34,46 @@ switch ($opcion) {
 ?>
 ```
 
+Pseudocodigo de ejemplo anterior:
+
+```pSeInt
+Funcion SUMAR (  )
+	Definir n1,n2 Como real
+	Escribir 'INGRESE PRIMER NUMERO: '
+	leer n1
+	Escribir 'INGRESE SEGUNDO NUMERO: '
+	leer n2
+	Escribir n1+n2
+Fin Funcion
+
+Funcion RESTAR (  )
+	Definir n1,n2 Como real
+	Escribir 'INGRESE PRIMER NUMERO: '
+	leer n1
+	Escribir 'INGRESE SEGUNDO NUMERO: '
+	leer n2
+	Escribir n1-n2
+Fin Funcion
+
+Algoritmo ejemplo_php_1
+	
+	Definir opcion Como Caracter
+	Escribir('SELECCIONE UNA OPCION (SUMAR|RESTAR): ')
+	leer opcion
+	
+	Segun opcion hacer
+		'SUMAR':
+			SUMAR()
+		'RESTAR':
+			RESTAR()
+		De otro modo:
+			Escribir "OPCION INVALIDA"
+	FinSegun
+	
+			
+FinAlgoritmo
+```
+
 
 EJEMPLO CLI CON 3 REPETICIONES
 ```php
