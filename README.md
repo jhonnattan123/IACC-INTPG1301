@@ -251,6 +251,60 @@ print("resultado : ".$resultado."<br>");
 ```
 
 
+### EJEMPLO COMPATIBLE CON FORMULARIOS, CON CODIGO EN DURO Y CON CLI
+
+```php
+<?php
+
+$primer_numero_default = 10;
+$segundo_numero_default = 10;
+$operacion_default = "SUMAR";
+
+
+// detectar si estamos en una consola, sino usar valores por defecto
+if (php_sapi_name() == "cli") {
+	
+	$operacion_default = readline('SELECCIONE UNA OPCION (SUMAR|RESTAR): ');
+  	$primer_numero_default = readline('INGRESE PRIMER NUMERO: ');
+	$segundo_numero_default= readline('INGRESE SEGUNDO NUMERO: ');
+
+}
+
+
+
+// si llego desde un formulario, sino usar valores por defecto
+$primer_numero = $_GET ? $_GET["primer_numero"] : $primer_numero_default;
+$segundo_numero = $_GET ? $_GET["segundo_numero"] : $segundo_numero_default;
+$operacion = $_GET ? $_GET["operacion"] : $operacion_default;
+
+function SUMAR( $n1, $n2 ){
+	return $n1 + $n2;
+}
+
+function RESTAR( $n1, $n2 ){
+	return $n1 - $n2;
+}
+
+switch($operacion){
+	case"SUMAR":
+		$resultado = SUMAR( $primer_numero, $segundo_numero );
+	break;
+	case"RESTAR":
+		$resultado = RESTAR( $primer_numero, $segundo_numero );
+	break;
+	default:
+}
+
+print("resultado : ".$resultado."\n<br>");
+
+// en el caso de que se haya enviado desde un formulario
+if($_GET){
+	print('<a href="./">volver</a>');
+}
+
+```
+
+
 # Enlaces
 diferencia entre print y echo
 https://www.it-swarm-es.com/es/php/cual-es-la-diferencia-entre-echo-print-y-print-r-en-php/968854098/
