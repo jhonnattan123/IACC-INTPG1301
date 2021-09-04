@@ -71,6 +71,34 @@ exit();
 
 ?>
 ```
+
+
+ejemplo sin CLI
+```php
+<?php
+
+$n_1 = 60;
+$n_2 = 10.5;
+$opcion = "RESTAR";
+
+switch($opcion){
+	case "SUMAR":
+    	echo "tu resultado es :";
+        echo $n_1 + $n_2;
+    break;
+    
+    case "RESTAR":
+    	echo "tu resultado es :";
+    	echo $n_1 - $n_2;
+    break;
+    
+    default:
+    	echo "NO EXISTE OPCION";
+
+};
+
+?>
+```
 # Enlaces
 PHP CLI
 https://replit.com/languages/PHP
