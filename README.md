@@ -99,6 +99,41 @@ switch($opcion){
 
 ?>
 ```
+
+
+
+ejemplo bucle CLI
+```php
+<?php
+function sumar() {
+	$n_1 = readline('INGRESE PRIMER NUMERO: ');
+	$n_2 = readline('INGRESE SEGUNDO NUMERO: ');
+    echo $n_1+$n_2."\n";
+}
+
+function restar() {
+  	$n_1 = readline('INGRESE PRIMER NUMERO: ');
+	$n_2 = readline('INGRESE SEGUNDO NUMERO: ');
+    echo $n_1-$n_2."\n";
+}
+$continuar = "si";
+while($continuar == "si") {
+	$opcion = readline('SELECCIONE UNA OPCION (SUMAR|RESTAR): ');
+	switch ($opcion) {
+		case "SUMAR":
+			sumar();
+		break;
+		case "RESTAR":
+			restar();
+		break;
+		default:
+			echo "OPCION INVALIDA\n";
+	}
+	$continuar = readline('QUIERE CONTINUAR (si/no)');
+}
+
+?>
+```
 # Enlaces
 diferencia entre print y echo
 https://www.it-swarm-es.com/es/php/cual-es-la-diferencia-entre-echo-print-y-print-r-en-php/968854098/
