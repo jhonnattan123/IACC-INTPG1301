@@ -191,6 +191,58 @@ Proceso DosALaDiezRecursivo
 FinProceso
 
 ```
+
+
+### EJEMPLO CON FORMULARIO HTML Y UN ARCHIVO PHP
+el archivo con el formulario se debe llamar index.php
+
+```html
+<form action="/calcular.php">
+    <label for="primer_numero">Primer numero:</label><br>
+    <input type="number" id="primer_numero" name="primer_numero">
+	<br>
+  	<label for="segundo_numero">Segundo numero:</label><br>
+  	<input type="number" id="segundo_numero" name="segundo_numero">
+    	<br>
+        <label for="operacion">Seleccione operacion:</label><br>
+	<select id="operacion" name="operacion">
+		<option value="SUMAR"> SUMAR </option>
+  		<option value="RESTAR"> RESTAR </option>
+        </select>
+	<br>
+	<br>
+  	<input type="submit" value="Enviar">
+</form> 
+
+</body>
+</html>
+
+```
+
+el archivo con el algoritmo se debe llamar calculo.php
+```php
+<?php
+$primer_numero = $_GET["primer_numero"];
+$segundo_numero = $_GET["segundo_numero"];
+$operacion = $_GET["operacion"];
+
+switch($operacion){
+	case"SUMAR":
+		$resultado = $primer_numero + $segundo_numero;
+	break;
+	case"RESTAR":
+		$resultado = $primer_numero - $segundo_numero;
+	break;
+	default:
+}
+
+print("resultado : ".$resultado."<br>");
+?>
+
+<a href="./">volver</a>
+```
+
+
 # Enlaces
 diferencia entre print y echo
 https://www.it-swarm-es.com/es/php/cual-es-la-diferencia-entre-echo-print-y-print-r-en-php/968854098/
@@ -200,3 +252,6 @@ https://replit.com/languages/PHP
 
 EJEMPLOS PHP
 https://www.w3schools.com/php/
+
+XAMMP para correr PHP en nuestra computadora
+https://www.apachefriends.org/es/index.html
