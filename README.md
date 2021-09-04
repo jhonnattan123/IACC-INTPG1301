@@ -100,6 +100,9 @@ switch($opcion){
 ?>
 ```
 # Enlaces
+diferencia entre print y echo
+https://www.it-swarm-es.com/es/php/cual-es-la-diferencia-entre-echo-print-y-print-r-en-php/968854098/
+
 PHP CLI
 https://replit.com/languages/PHP
 
