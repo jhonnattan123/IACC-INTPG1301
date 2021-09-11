@@ -64,7 +64,69 @@ Algoritmo algoritmo_semana_6_jhonnattan_rivera
 	
 FinAlgoritmo
 ```
+## equivalente de pseucodigo en PHP
 
+```php
+<?php
+
+//paso1 : definir mi palabra.
+$palabra = "l,u,z,a,z,u,l,";
+$cantidad_caracteres = strlen($palabra);
+
+//paso2 : definir mi palabra pero invertida.
+for ($i = 0; $i <= $cantidad_caracteres; $i++) {
+	$letra_iteracion = substr($palabra, $cantidad_caracteres-$i, 1 );
+    $palabra_invertida = $palabra_invertida.$letra_iteracion;
+}
+
+$resultado = "es palindromo";
+$palabra_sin_espacios = "";
+$palabra_invertida_sin_espacios = "";
+
+//paso3 : eliminar espacios
+for ($i = 0; $i <= $cantidad_caracteres; $i++) {
+
+	$letra_iteracion_palabra = substr($palabra, $i, 1 );
+	$letra_iteracion_palabra_invertida = substr($palabra_invertida, $i, 1 );
+    
+    if( $letra_iteracion_palabra != " " and $letra_iteracion_palabra != "," ){
+    	$palabra_sin_espacios = $palabra_sin_espacios.$letra_iteracion_palabra;
+    }
+    
+    if( $letra_iteracion_palabra_invertida != " " and $letra_iteracion_palabra_invertida != "," ){
+    	$palabra_invertida_sin_espacios = $palabra_invertida_sin_espacios.$letra_iteracion_palabra_invertida;
+    }
+    
+}
+
+$palabra_sin_espacios = strtolower($palabra_sin_espacios);
+$palabra_invertida_sin_espacios = strtolower($palabra_invertida_sin_espacios);
+	
+echo "mi palabrita: ".$palabra_sin_espacios;
+echo "<br>";
+echo "mi palabrita invertida: ".$palabra_invertida_sin_espacios;
+echo "<br>";
+
+//paso4 : comparar cada letra de la palabra y la palabra invertida.
+$cantidad_caracteres_sin_espacios = strlen($palabra_sin_espacios);
+
+for( $i=0; $i<=$cantidad_caracteres_sin_espacios; $i++ ){
+
+	$letra_iteracion_palabra = substr($palabra_sin_espacios,$i,1);
+    $letra_iteracion_palabra_invertida = substr($palabra_invertida_sin_espacios,$i,1);
+    
+    if( $letra_iteracion_palabra != $letra_iteracion_palabra_invertida ){
+        echo "letras distintas<br>";
+    	$resultado = "no es palindromo";
+    } else {
+    	echo "letras iguales<br>";
+    }
+}
+echo "<br>";
+echo $resultado;  
+
+?> 
+```
 
 ## ejemplo en PHP
 ```php
