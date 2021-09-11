@@ -1,5 +1,7 @@
-```
 ## ejemplo creado en la junta con pseudocodigo
+
+```
+
 
 Algoritmo algoritmo_semana_6_jhonnattan_rivera
 	// no se permiten , ni letras mayusculas, ni acentuadas ni . ni cualiquier parametro
