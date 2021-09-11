@@ -1,4 +1,6 @@
 ```
+## ejemplo creado en la junta con pseudocodigo
+
 Algoritmo algoritmo_semana_6_jhonnattan_rivera
 	// no se permiten , ni letras mayusculas, ni acentuadas ni . ni cualiquier parametro
 	// que no sea una vocal o una consonante
@@ -7,7 +9,7 @@ Algoritmo algoritmo_semana_6_jhonnattan_rivera
 	Definir palabra, palabra_invertida Como Caracter
 
 	//paso1 : definir mi palabra.
-	palabra = "No subas, abusón"
+	palabra = "luz azul"
 	cantidad_caracteres = Longitud(palabra)
 	
 	//paso2 : definir mi palabra pero invertida.
@@ -60,3 +62,40 @@ Algoritmo algoritmo_semana_6_jhonnattan_rivera
 	
 FinAlgoritmo
 ```
+
+
+## ejemplo en PHP
+```php
+<?php
+/**
+ * Funcion para determinar si un texto es polindromo
+ *
+ * @param string $cadena
+ * @return boolean
+ */
+function esPolindromo($cadena)
+{
+    if (strlen($cadena)<2) {
+        return false;
+    }
+ 
+    # eliminamos los espacios, comas, puntos y convertimos la cadena en minusculas
+    $cadena=strtolower(str_replace([" ", ",", "."], "", $cadena));
+ 
+    for ($i=0;$i<strlen($cadena);$i++) {
+        if ($cadena[$i]!=$cadena[strlen($cadena)-$i-1]) {
+            return false;
+        }
+    }
+    return true;
+}
+ 
+ 
+echo esPolindromo("casa");                      // false
+echo esPolindromo("Isaac no ronca asi");        // true
+echo esPolindromo("Yo dono rosas, oro no doy"); // true
+echo esPolindromo("12521");                     // true
+```
+
+## Fuentes:
+https://www.lawebdelprogramador.com/codigo/PHP/5408-Funcion-para-determinar-si-una-cadena-es-palindromo.html
